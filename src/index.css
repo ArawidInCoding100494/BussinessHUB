@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+
+
+
+    @layer components{
+
+    .normLink{
+        @apply text-[#94a3b8] text-xl flex flex-col items-center justify-center hover:text-blue-600 duration-300
+    }
+
+    .active{
+        @apply  text-blue-600 text-xl flex flex-col items-center justify-center hover:text-[#94a3b8]
+    }
+
+    .container{
+        @apply w-[90%] mx-auto }
+
+
+    .textCol{
+        @apply text-[#64748b]
+    }
+
+    
+
+
+
+    }
