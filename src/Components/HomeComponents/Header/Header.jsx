@@ -20,7 +20,7 @@ const Header = () => {
 
         </div>
 
-        <div className="header-right flex items-center gap-4">
+        <div className="header-right flex items-center gap-4 mr-15">
             <FaBell className='text-gray-600 text-2xl' />
             <IoMdSettings className='text-gray-600 text-2xl' />
         </div>

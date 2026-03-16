@@ -1,29 +1,48 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@layer base {
+  /* Default (Light) mode */
+  :root {
+    --main-bg: #f5f7f8;
+    --text-color: #334155;
+    --card-bg: #ffffff;
+    --input-bg: #f1f5f9;
+  }
 
+  /* Dark mode */
+  .dark {
+    --main-bg: #0f172a; /* To'q ko'k/qora fon */
+    --text-color: #f8fafc;
+    --textInCard-color: #334155;
+    --card-bg: #1e293b;
+    --input-bg: #334155;
+  }
+}
 
+@layer components {
+  /* Sizning mavjud klasslaringizni o'zgaruvchilarga moslaymiz */
+  .normLink {
+    @apply text-slate-400 text-xl flex flex-col items-center justify-center hover:text-blue-600 duration-300;
+  }
 
-    @layer components{
+  .active {
+    @apply text-blue-600 text-xl flex flex-col items-center justify-center;
+  }
 
-    .normLink{
-        @apply text-[#94a3b8] text-xl flex flex-col items-center justify-center hover:text-blue-600 duration-300
-    }
+  .container {
+    @apply w-[90%] mx-auto;
+  }
 
-    .active{
-        @apply  text-blue-600 text-xl flex flex-col items-center justify-center hover:text-[#94a3b8]
-    }
+  .inp {
+    @apply w-full p-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600;
+    background-color: var(--input-bg); /* Dinamik rang */
+    color: var(--text-color);
+  }
 
-    .container{
-        @apply w-[90%] mx-auto }
-
-
-    .textCol{
-        @apply text-[#64748b]
-    }
-
-    
-
-
-
-    }
+  .analitikaMainBtn {
+    @apply flex items-center gap-2 duration-300 shadow p-3 capitalize font-semibold rounded-2xl w-full mt-2 justify-center cursor-pointer hover:bg-blue-600 hover:text-white;
+    background-color: var(--card-bg); /* Dinamik rang */
+    color: var(--text-color);
+  }
+}
